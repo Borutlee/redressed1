@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="rmon.css">
+</head>
+<body>
+    <div class="header">
+        <div class="nav">
+            <div class="rmon"> 
+                <img src="redressed.png" alt=""> 
+            </div>
+            <div class="box home">Home</div>
+            <div class="box start">Start now</div>
+            <div class="box service">Our service</div>
+            <div class="box contact">Contact Us</div>
+        </div>
+    </div>
+    <div class="show">
+        <h1>ReDressed</h1>
+        <h2>"We bring your old things back to life"</h2>
+        <h3>"Clothing and shoe design and renovation services in simple steps!"</h3>
+        <div class="mm">
+            <img src="redressed.png" alt="Image description">
+        </div>
+    </div>
+    <div class="ours">
+        <h1>Our services</h1>
+    </div>
+    <div class="o">
+        <div class="o1">
+            <video class="v1" src="v1.mp4"></video>
+            <h1>Clothing Redesign</h1>
+            <p>"Transform your old clothes into modern, trendy pieces that suit your unique style."</p>
+        </div>
+        <div class="o2">
+            <video class="v2" src="v2.mp4"></video>
+            <h1>Shoe Renovation</h1>
+            <p>"Revive your old shoes with fresh and creative designs that stand out."</p>
+        </div>
+        <div class="o3">
+            <video class="v3" src="v3.mp4"></video>
+            <h1>Custom Styling</h1>
+            <p>"Get personalized designs crafted to reflect your individuality and taste."</p>
+        </div>
+    </div>
+    <div class="us">
+        <h1>About Us</h1>
+        <h2>Welcome to Redressed, the ultimate destination for redesigning and rejuvenating your old clothes and shoes in a stylish and innovative way. We are here to transform your worn-out garments into fashionable pieces that perfectly match your unique personality and taste.</h2>
+    </div>
+    <div class="why">
+        <h1>Why Us?</h1>
+        <h2>We pride ourselves on having a team of skilled designers who are passionate about renewing clothes and delivering unique designs that reflect each client’s individuality. We ensure the highest level of quality and attention to detail in every piece we work on.</h2>
+    </div>
+     
+    <script>
+        // العثور على جميع مربعات الخدمات والفيديوهات
+        const serviceBoxes = document.querySelectorAll('.o div');
+
+        // إضافة الأحداث لكل مربع
+        serviceBoxes.forEach(box => {
+            const video = box.querySelector('video'); // الحصول على الفيديو داخل المربع
+
+            // تشغيل الفيديو عند تمرير الماوس
+            box.addEventListener('mouseover', () => {
+                video.play();
+            });
+
+            // إيقاف الفيديو عند سحب الماوس
+            box.addEventListener('mouseout', () => {
+                video.pause();
+                video.currentTime = 0; // إعادة الفيديو للبداية
+            });
+        });
+    </script>
+</body>
+</html>
